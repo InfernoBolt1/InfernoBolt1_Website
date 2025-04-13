@@ -8,7 +8,7 @@
 html, body {
   height: 100%;
   font-family: 'Inter', sans-serif;
-  background-color: #f4f4f4;
+  background-color: #d6d6d6;  /* Slightly darker background */
   color: #333;
 }
 
@@ -30,30 +30,31 @@ header, section {
 }
 
 header {
-  background-color: #e8eaf6;
+  background-color: #b3c0e0;  /* Slightly darker header */
   color: #3f51b5;
 }
 
 .about {
   background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .image-section img {
   max-width: 90%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
 .button-section {
-  background-color: #e0f7fa;
+  background-color: #b3e0e5;  /* Slightly darker button section */
 }
 
 .cta-button {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
-  background-color: #0097a7;
+  background-color: #007c91;  /* Darker button color */
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
@@ -61,7 +62,7 @@ header {
 }
 
 .cta-button:hover {
-  background-color: #007c91;
+  background-color: #00677a;  /* Darker hover effect */
 }
 
 /* Footer */
