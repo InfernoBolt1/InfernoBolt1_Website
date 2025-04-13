@@ -8,8 +8,8 @@
 html, body {
   height: 100%;
   font-family: 'Inter', sans-serif;
-  background-color: #d6d6d6;  /* Slightly darker background */
-  color: #333;
+  background-color: #2a2a2a;  /* Darker background */
+  color: #f0f0f0;  /* Light text for contrast */
 }
 
 /* Sticky footer container */
@@ -27,54 +27,54 @@ html, body {
 header, section {
   padding: 2rem;
   text-align: center;
+  background-color: #3a3a3a;  /* Dark grey sections */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);  /* Slight shadow for depth */
 }
 
 header {
-  background-color: #b3c0e0;  /* Slightly darker header */
-  color: #3f51b5;
+  color: #ffffff;  /* Light text for header */
 }
 
 .about {
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  background-color: #4a4a4a;  /* Slightly darker grey for the about section */
 }
 
 .image-section img {
   max-width: 90%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
 .button-section {
-  background-color: #b3e0e5;  /* Slightly darker button section */
+  background-color: #5a5a5a;  /* Darker button section */
 }
 
 .cta-button {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
-  background-color: #007c91;  /* Darker button color */
-  color: #fff;
+  background-color: #666666;  /* Dark grey button */
+  color: #f0f0f0;  /* Light text */
   text-decoration: none;
   border-radius: 6px;
   transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #00677a;  /* Darker hover effect */
+  background-color: #555555;  /* Slightly darker on hover */
 }
 
 /* Footer */
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #1a1a1a;  /* Even darker footer */
+  color: #f0f0f0;  /* Light text */
   text-align: center;
   padding: 1rem;
 }
 
 footer a {
-  color: #90caf9;
+  color: #90caf9;  /* Slightly blue text for links */
   text-decoration: none;
 }
 
