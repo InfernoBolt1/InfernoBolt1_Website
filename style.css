@@ -39,10 +39,9 @@ main {
   width: 400px;
 }
 
-.banner {
-  max-width: 100%;
+.pfp {
+  max-width: 90%;
   height: auto;
-  border-radius: 1rem;
   margin-bottom: 1rem;
 }
 
