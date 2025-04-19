@@ -1,3 +1,4 @@
+/* ↓ Body Styling ↓ */
 body {
   margin: 0;
   padding: 0;
@@ -10,6 +11,7 @@ body {
   text-align: center;
 }
 
+/* ↓ Header Styling ↓ */
 header {
   background-color: #1b263b;
   padding: 1rem 0;
@@ -22,6 +24,7 @@ header h1 {
   font-size: 1.8rem;
 }
 
+/* ↓ Main Layout ↓ */
 main {
   flex: 1;
   display: flex;
@@ -30,6 +33,7 @@ main {
   padding: 2rem;
 }
 
+/* ↓ Card Styling ↓ */
 .card {
   background-color: #1b263b;
   padding: 2rem;
@@ -39,24 +43,28 @@ main {
   width: 400px;
 }
 
+/* ↓ Profile Image ↓ */
 .pfp {
   max-width: 90%;
   height: auto;
   margin-bottom: 1rem;
 }
 
+/* ↓ Paragraph Styling ↓ */
 p {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
   color: #cdb4db;
 }
 
+/* ↓ Buttons Container ↓ */
 .buttons {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
+/* ↓ Button Styling ↓ */
 .btn {
   display: inline-block;
   padding: 0.6rem 1.2rem;
@@ -73,6 +81,7 @@ p {
   transform: scale(1.03);
 }
 
+/* ↓ Special "Boo" Button ↓ */
 .btn.boo {
   background-color: #7209b7;
   box-shadow: 0 0 8px #7209b7aa;
@@ -83,6 +92,7 @@ p {
   background-color: #b5179e;
 }
 
+/* ↓ Footer Styling ↓ */
 footer {
   background-color: #1b263b;
   padding: 1rem 0;
