@@ -13,6 +13,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Keyboard,
 		C3.Plugins.Text,
 		C3.Plugins.Button,
+		C3.Plugins.Touch,
 		C3.Plugins.System.Cnds.EveryTick,
 		C3.Plugins.Sprite.Acts.SetTowardPosition,
 		C3.Plugins.Mouse.Exps.X,
@@ -42,7 +43,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.RestartLayout,
 		C3.Plugins.System.Acts.ResetEventVar,
 		C3.Plugins.System.Acts.ResetGlobals,
-		C3.Plugins.Keyboard.Cnds.OnKey
+		C3.Plugins.Keyboard.Cnds.OnKey,
+		C3.Plugins.Touch.Cnds.OnTapGesture,
+		C3.Plugins.Touch.Cnds.OnTapGestureObject
 	];
 };
 self.C3_JsPropNameTable = [
@@ -65,6 +68,7 @@ self.C3_JsPropNameTable = [
 	{gameOverRestartButton: 0},
 	{controlSchemeTips: 0},
 	{whiteLine: 0},
+	{Touch: 0},
 	{Score: 0}
 ];
 
@@ -80,5 +84,6 @@ self.InstanceType = {
 	gameOverText: class extends self.ITextInstance {},
 	gameOverRestartButton: class extends self.IButtonInstance {},
 	controlSchemeTips: class extends self.ITextInstance {},
-	whiteLine: class extends self.ISpriteInstance {}
+	whiteLine: class extends self.ISpriteInstance {},
+	Touch: class extends self.IInstance {}
 }
