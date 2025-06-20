@@ -1,67 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/boo.png" type="image/png">
-    <title>BOO!</title>
-    <style>
-        /* Style for the whole page */
-        body {
-            background-color: #0d1b2a; /* Dark background color */
-            color: white; /* White text color */
-            font-family: Arial, sans-serif; /* Use Arial font */
-            text-align: center; /* Center the text */
-            margin: 0; /* Remove default margin */
-            display: flex; /* Use flexbox to align items */
-            justify-content: center; /* Center content horizontally */
-            align-items: center; /* Center content vertically */
-            height: 100vh; /* Make the body take up the full height of the screen */
-            position: relative; /* To position the ghosts */
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BOO! - InfernoBolt1</title>
 
-        /* Style for the large heading */
-        h1 {
-            font-size: 200px; /* Size of the text */
-            text-transform: uppercase; /* Make the text all uppercase */
-        }
-
-        /* Style for the ghost icons */
-        .ghost {
-            position: absolute;
-            width: 50px; /* Width of the ghost icon */
-            height: 50px; /* Height of the ghost icon */
-            background-image: url('images/boo.png');
-            background-size: cover; /* Cover the whole area */
-            filter: invert(1); /* Invert the image (turn black to white) */
-        }
-
-        /* Positioning for the ghost icons */
-        .top-left {
-            top: 10px;
-            left: 10px;
-        }
-        .top-right {
-            top: 10px;
-            right: 10px;
-        }
-        .bottom-left {
-            bottom: 10px;
-            left: 10px;
-        }
-        .bottom-right {
-            bottom: 10px;
-            right: 10px;
-        }
-    </style>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/image.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 </head>
-<body>
-    <h1>BOO!</h1> <!-- Main heading of the page -->
-
-    <!-- Ghost icons -->
-    <div class="ghost top-left"></div>
-    <div class="ghost top-right"></div>
-    <div class="ghost bottom-left"></div>
-    <div class="ghost bottom-right"></div>
+<body class="boo-page">
+  <h1>BOO!</h1>
+  <img src="images/boo.png" alt="Ghost sprite" class="ghost top-left" />
+  <img src="images/boo.png" alt="Ghost sprite" class="ghost top-right" />
+  <img src="images/boo.png" alt="Ghost sprite" class="ghost bottom-left" />
+  <img src="images/boo.png" alt="Ghost sprite" class="ghost bottom-right" />
 </body>
 </html>
