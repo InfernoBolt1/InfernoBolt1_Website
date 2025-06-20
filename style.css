@@ -1,27 +1,64 @@
+:root {
+  --clr-bg: #0d1b2a;
+  --clr-card: #1b263b;
+  --clr-text: #e0f7fa;
+  --clr-accent: #5e60ce;
+  --clr-accent-shadow: #5e60ceaa;
+  --clr-footer: #cdb4db;
+}
+
 /* ↓ Body Styling ↓ */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #0d1b2a;
-  color: #e0f7fa;
+  background: radial-gradient(circle at top left, #0d1b2a, #000814);
+  color: var(--clr-text);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   text-align: center;
+  overflow-x: hidden;
 }
 
 /* ↓ Header Styling ↓ */
 header {
-  background-color: #1b263b;
+  background-color: var(--clr-card);
   padding: 1rem 0;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  position: relative; /* for absolute positioning of icon */
+}
+
+/* This container holds header content */
+.header-content {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Keep <h1> centred */
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Theme toggle icon styles - positioned leftmost in header */
+#theme-toggle {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#theme-toggle:hover {
+  transform: translateY(-50%) rotate(20deg);
 }
 
 header h1 {
   margin: 0;
   color: #8ecae6;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
 }
 
 /* ↓ Main Layout ↓ */
@@ -30,17 +67,17 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
 /* ↓ Card Styling ↓ */
 .card {
-  background-color: #1b263b;
+  background-color: var(--clr-card);
   padding: 2rem;
   border-radius: 1.5rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  max-width: 90%;
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
 }
 
 /* ↓ Profile Image ↓ */
@@ -48,13 +85,16 @@ main {
   max-width: 90%;
   height: auto;
   margin-bottom: 1rem;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
 }
 
-/* ↓ Paragraph Styling ↓ */
-p {
-  font-size: 1.1rem;
+/* ↓ Welcome Heading ↓ */
+.welcome {
+  font-size: 1.4rem;
   margin-bottom: 1.5rem;
-  color: #cdb4db;
+  color: var(--clr-footer);
 }
 
 /* ↓ Buttons Container ↓ */
@@ -66,37 +106,113 @@ p {
 
 /* ↓ Button Styling ↓ */
 .btn {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background-color: #5e60ce;
-  color: white;
-  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  background-color: var(--clr-accent);
   border-radius: 999px;
-  transition: 0.3s ease;
-  box-shadow: 0 0 8px #5e60ceaa;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px var(--clr-accent-shadow);
+  font-weight: 600;
+  border: none;
 }
 
 .btn:hover {
-  box-shadow: 0 0 16px #5e60cecc;
-  transform: scale(1.03);
+  box-shadow: 0 0 16px var(--clr-accent);
+  transform: scale(1.05);
 }
 
-/* ↓ Special "Boo" Button ↓ */
-.btn.boo {
-  background-color: #7209b7;
-  box-shadow: 0 0 8px #7209b7aa;
+.btn img {
+  height: 24px;
+  width: auto;
+  display: block;
 }
 
-.btn.boo:hover {
-  box-shadow: 0 0 16px #f72585cc;
-  background-color: #b5179e;
+/* ↓ Disabled Button ↓ */
+.btn.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: grey;
+  box-shadow: none;
+  color: white;
 }
 
 /* ↓ Footer Styling ↓ */
 footer {
-  background-color: #1b263b;
-  padding: 1rem 0;
-  color: #cdb4db;
-  font-size: 0.9rem;
-  box-shadow: 0 -4px 8px rgba(0,0,0,0.3);
+  background-color: var(--clr-card);
+  padding: 1rem;
+  color: var(--clr-footer);
+  font-size: 0.95rem;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+  margin-top: auto;
+  text-align: center;
+}
+
+.footer-content p {
+  margin: 0.2rem 0;
+}
+
+.footer-content a {
+  color: var(--clr-footer);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+  color: var(--clr-accent);
+}
+
+/* ↓ Responsive ↓ */
+@media (max-width : 519px ){
+  .card {
+    padding: 1.5rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .welcome {
+    font-size: 1.2rem;
+  }
+}
+
+/* ↓ Light Mode Styles ↓ */
+body.light-mode {
+  background: radial-gradient(circle at top left, #f0f0f0, #cccccc);
+  color: #111;
+}
+
+body.light-mode .card,
+body.light-mode header,
+body.light-mode footer {
+  background-color: #ffffff;
+  color: #111;
+}
+
+body.light-mode .btn {
+  background-color: #0077cc;
+  box-shadow: 0 0 8px rgba(0, 119, 204, 0.4);
+}
+
+body.light-mode .btn:hover {
+  box-shadow: 0 0 16px rgba(0, 119, 204, 0.7);
+}
+
+body.light-mode header h1 {
+  color: #222222; /* Darker grey/near black for header title */
+}
+
+body.light-mode .welcome {
+  color: #333333; /* Dark grey for welcome message */
+}
+
+body.light-mode .footer-content a {
+  color: #222222; /* Darker colour for email link */
+}
+
+body.light-mode .footer-content a:hover {
+  color: #0077cc;
 }
