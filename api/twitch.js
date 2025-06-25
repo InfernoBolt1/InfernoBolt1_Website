@@ -76,3 +76,12 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: error.message });
   }
 }
+
+export default async function handler(req, res) {
+  try {
+    // your code
+  } catch (error) {
+    console.error('YouTube API error:', error);  // <-- here
+    res.status(500).json({ error: error.message });
+  }
+}
