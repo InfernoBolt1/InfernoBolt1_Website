@@ -1,0 +1,23 @@
+{
+  "name": "infernobolt1.uk",
+  "version": "1.0.0",
+  "description": "...",
+  "main": "social.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InfernoBolt1/infernobolt1.uk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/InfernoBolt1/infernobolt1.uk/issues"
+  },
+  "homepage": "https://github.com/InfernoBolt1/infernobolt1.uk#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
