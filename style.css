@@ -21,6 +21,7 @@ body {
   flex-direction: column;
   text-align: center;
   overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* Header */

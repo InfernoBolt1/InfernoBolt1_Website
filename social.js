@@ -71,7 +71,7 @@ async function updateSocialStats() {
         <h3>YouTube Stats</h3>
         <p>Subscribers: <strong>${formatNumber(ytData.subscribers)}</strong></p>
         <p>Total Views: <strong>${formatNumber(ytData.totalViews)}</strong></p>
-        <p>Latest Video Views: <strong>Loading…</strong></p>
+        <p>Latest Video Views: <strong>${formatNumber(ytData.latestVideo.views)}</strong></p>
         <div class="video-embed">
           ${createYouTubeEmbed(ytData.latestVideo.id)}
         </div>
